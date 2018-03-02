@@ -19,7 +19,7 @@ public class AdminDAO {
 
 	public AdminDTO getAdminUser(String adminId, String adminPass) {
 
-		String sql = "select * from admin_user where admin_id = ? and admin_pass = ?";
+		String sql = "select * from admin_user2 where admin_id = ? and admin_pass = ?";
 
 		try{
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
@@ -29,7 +29,7 @@ public class AdminDAO {
 
 			if(resultSet.next()){
 				adminDTO.setAdminId(resultSet.getString("admin_id"));
-				adminDTO.setAdminPass(resultSet.getString("login_pass"));
+				adminDTO.setAdminPass(resultSet.getString("admin_pass"));
 
 				if(!(resultSet.getString("admin_id").equals(null))){
 					adminDTO.setAdminFlg(true);

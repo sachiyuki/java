@@ -5,6 +5,7 @@ public class ItemDTO {
 	public int id;
 	public String itemName;
 	public String itemPrice;
+	public String itemStock;
 
 	public String getItemName(){
 		return itemName;
@@ -33,6 +34,17 @@ public class ItemDTO {
 		// TODO 自動生成されたメソッド・スタブ
 		return itemPrice;
 	}
+
+	public String getItemStock(){
+		return itemStock;
+	}
+
+	public void setItemStock(String itemStock) {
+		// TODO 自動生成されたメソッド・スタブ
+		this.itemStock = itemStock;
+	}
+
+
 
 
 
