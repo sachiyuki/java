@@ -5,15 +5,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import com.internousdev.ecsite.util.DBConnector;
-import com.internousdev.ecsite.util.DateUtil;
 
 public class ItemEditDAO {
 
 	private DBConnector dbConnector = new DBConnector();
 
 	private Connection connection = dbConnector.getConnection();
-
-	private DateUtil dateUtil = new DateUtil();
 
 	private String sql = "update item_info_transaction set item_name = ?, item_price = ?, item_stock = ? where id = ?";
 

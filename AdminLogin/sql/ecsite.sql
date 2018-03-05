@@ -18,4 +18,6 @@ item_name varchar(30),
 item_price int,
 item_stock int);
 
-insert into item_info_transaction(item_name,item_price, item_stock) values("notebook",100,50);
+insert into item_info_transaction(item_name,item_price, item_stock) values("Notebook",100,50);
+insert into item_info_transaction(item_name,item_price, item_stock) values("A4 file",150,30);
+insert into item_info_transaction(item_name,item_price, item_stock) values("Penk",70,100);

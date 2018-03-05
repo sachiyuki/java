@@ -12,7 +12,7 @@
 
 <h2>商品情報編集画面</h2>
 
-<s:form action="ItemConfirmAction">
+<s:form action="ItemConfirmAction" value="itemList">
 
 <table border="1">
 <tr>

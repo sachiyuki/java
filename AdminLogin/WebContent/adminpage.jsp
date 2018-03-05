@@ -9,15 +9,21 @@
 </head>
 <body>
 
+Login Success.
+
+<hr>
 
 <h3>商品在庫は以下になります。</h3>
+
 <s:form>
 
 <table border="1">
 <tr>
+	<th>商品ID</th>
+	<th>商品名</th>
+	<th>値段</th>
+	<th>在庫数</th>
 	<th></th>
-	<th>現在の商品情報</th>
-	<th>更新する商品情報</th>
 </tr>
 <s:iterator value="itemList">
 <tr>
@@ -26,9 +32,9 @@
 	<td><s:property value="itemPrice"/></td>
 	<td><s:property value="itemStock"/></td>
 	<td>
-	<s:form action="itemAction">
-		<input type="hidden" name="itemId" value='<s:property value="id"/>'/>
-		<s:submit value="編集" method="edit"/>
+	<s:form action="ItemAction">
+		<input type="hidden" name="id" value="%{id}"/>
+		<s:submit value="編集"/>
 	</s:form>
 	</td>
 </tr>

@@ -18,7 +18,9 @@ public class ItemConfirmAction implements SessionAware{
 	private String errorMessage;
 
 	public String execute() throws SQLException{
-		result = SUCCESS;
+
+
+		String result = SUCCESS;
 
 		return result;
 
