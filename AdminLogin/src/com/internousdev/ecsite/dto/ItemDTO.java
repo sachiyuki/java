@@ -2,7 +2,7 @@ package com.internousdev.ecsite.dto;
 
 public class ItemDTO {
 
-	public int id;
+	public String id;
 	public String itemName;
 	public String itemPrice;
 	public String itemStock;
@@ -21,11 +21,11 @@ public class ItemDTO {
 		this.itemPrice = itemPrice;
 	}
 
-	public int getId(){
+	public String getId(){
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		// TODO 自動生成されたメソッド・スタブ
 		this.id = id;
 	}

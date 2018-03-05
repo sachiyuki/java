@@ -1,5 +1,6 @@
 package com.internousdev.ecsite.action;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -22,6 +23,9 @@ public class AdminAction extends ActionSupport implements SessionAware{
 	private AdminDTO adminDTO = new AdminDTO();
 	private ItemDAO itemDAO = new ItemDAO();
 
+	public ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();
+
+
 	public String execute(){
 		result = ERROR;
 
@@ -33,11 +37,11 @@ public class AdminAction extends ActionSupport implements SessionAware{
 
 	if(((AdminDTO)session.get("adminUser")).getAdminFlg()){
 		result = SUCCESS;
-		ItemDTO itemDTO = itemDAO.getItemInfo();
-		session.put("admin_id",adminDTO.getAdminId());
-		session.put("id",itemDTO.getId());
-		session.put("Item_name",itemDTO.getItemName());
-		session.put("Item_price", itemDTO.getItemPrice());
+		itemList = itemDAO.getItemInfo();
+//		session.put("admin_id",adminDTO.getAdminId());
+//		session.put("id",itemDTO.getId());
+//		session.put("Item_name",itemDTO.getItemName());
+//		session.put("Item_price", itemDTO.getItemPrice());
 
 		return result;
 	}
@@ -59,6 +63,16 @@ public class AdminAction extends ActionSupport implements SessionAware{
 
 	public void setAdminPass(String adminPass){
 		this.adminPass = adminPass;
+	}
+
+
+
+	public ArrayList<ItemDTO> getItemList() {
+		return itemList;
+	}
+
+	public void setItemList(ArrayList<ItemDTO> itemList) {
+		this.itemList = itemList;
 	}
 
 	@Override

@@ -14,8 +14,20 @@
 			<result name="success">adminpage.jsp</result>
 			<result name="error">login.jsp</result>
 		</action>
-		<!-- LogoutAction -->
 
+
+		<!-- ItemAction -->
+		<action name="ItemAction" class="com.internousdev.ecsite.action.ItemAction" method="execute">
+			<result name="success">itemedit.jsp</result>
+			<result name="error">adminpage.jsp</result>
+		</action>
+
+
+		<!--  ItemConfirmAction -->
+		<action name="ItemAction" class="com.internousdev.ecsite.action.ItemConfirmAction" method="execute">
+			<result name="success">itemconfirm.jsp</result>
+			<result name="error">itemedit.jsp</result>
+		</action>
 
 	</package>
 </struts>

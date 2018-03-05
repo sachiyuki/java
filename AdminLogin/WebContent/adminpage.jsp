@@ -9,12 +9,33 @@
 </head>
 <body>
 
-LoginSuccess.
 
-<p>
-<s:if test="session.message == ''">
-<s:property value="session."
-</s:if>
-</p>
+<h3>商品在庫は以下になります。</h3>
+<s:form>
+
+<table border="1">
+<tr>
+	<th></th>
+	<th>現在の商品情報</th>
+	<th>更新する商品情報</th>
+</tr>
+<s:iterator value="itemList">
+<tr>
+	<td><s:property value="id"/></td>
+	<td><s:property value="itemName"/></td>
+	<td><s:property value="itemPrice"/></td>
+	<td><s:property value="itemStock"/></td>
+	<td>
+	<s:form action="itemAction">
+		<input type="hidden" name="itemId" value='<s:property value="id"/>'/>
+		<s:submit value="編集" method="edit"/>
+	</s:form>
+	</td>
+</tr>
+</s:iterator>
+</table>
+</s:form>
+
+
 </body>
 </html>
