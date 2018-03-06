@@ -25,7 +25,13 @@
 
 		<!--  ItemConfirmAction -->
 		<action name="ItemConfirmAction" class="com.internousdev.ecsite.action.ItemConfirmAction" method="execute">
-			<result name="success">itemconfirm.jsp</result>
+			<result name="success">itemEditConfirm.jsp</result>
+			<result name="error">itemedit.jsp</result>
+		</action>
+
+		<!--  ItemEditCompleteAction -->
+		<action name="ItemEditCompleteAction" class="com.internousdev.ecsite.action.ItemEditCompleteAction" method="execute">
+			<result name="success">adminpage.jsp</result>
 			<result name="error">itemedit.jsp</result>
 		</action>
 

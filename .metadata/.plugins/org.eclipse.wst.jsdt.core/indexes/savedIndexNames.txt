@@ -1,10 +1,7 @@
 INDEX VERSION 1.3+C:\Users\testuser\Desktop\Workspeace\workspace-yuuki\java\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1790133210.index
 4042908318.index
 1983310380.index
-2378904234.index
-1790133210.index
-959013606.index
-2734785350.index
 2542067671.index
+2734785350.index
+959013606.index
 3414358908.index

@@ -1,6 +1,5 @@
 package com.internousdev.ecsite.action;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -11,38 +10,17 @@ import com.internousdev.ecsite.dto.ItemDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ItemEditAction extends ActionSupport implements SessionAware {
-	
+
 	public Map<String, Object> session;
 	private ItemEditDAO itemEditDAO = new ItemEditDAO();
 	private ArrayList<ItemDTO> itemList = new ArrayList<ItemDTO>();
-	private String deleteFlg;
-	private String editFlg;
-	private String message;
-	
-	
-	public String execute() throws SQLException {
-		
-	
-	if(deleteFlg == "1"){
-		delete();
-	}
-	
-	String result = SUCCESS;
-	return result;
-	
-	}
-	
-	public void delete() throws SQLException{
-		String id = session.get("id").toString();
-		String 
-	}
-	
-	
+
+
 	@Override
 	public void setSession(Map<String, Object> arg0) {
 		// TODO 自動生成されたメソッド・スタブ
-		
+
 	}
-	
+
 
 }

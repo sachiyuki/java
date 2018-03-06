@@ -12,7 +12,7 @@
 
 <h2>商品情報編集画面</h2>
 
-<s:form action="ItemConfirmAction" value="itemList">
+<s:form action="ItemConfirmAction">
 
 <table border="1">
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 	<td>商品ID</td>
 	<td><s:property value="id"/></td>
-	<td>-</td>
+	<td>-<input type="hidden" name="id" value='<s:property value="id"/>'></td>
 </tr>
 <tr>
 	<td>商品名</td>

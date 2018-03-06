@@ -15,10 +15,11 @@ Login Success.
 
 <h3>商品在庫は以下になります。</h3>
 
-<s:form>
+<input type="submit" value="削除">
 
 <table border="1">
 <tr>
+	<th></th>
 	<th>商品ID</th>
 	<th>商品名</th>
 	<th>値段</th>
@@ -27,20 +28,25 @@ Login Success.
 </tr>
 <s:iterator value="itemList">
 <tr>
+	<td><input type="checkbox"></td>
 	<td><s:property value="id"/></td>
 	<td><s:property value="itemName"/></td>
 	<td><s:property value="itemPrice"/></td>
 	<td><s:property value="itemStock"/></td>
 	<td>
-	<s:form action="ItemAction">
-		<input type="hidden" name="id" value="%{id}"/>
-		<s:submit value="編集"/>
+
+	<s:form action="ItemAction" name="Edit" method="post">
+	<input type="hidden" name="id" value='<s:property value="id"/>'>
+	<input type="hidden" name="itemName" value='<s:property value="itemName"/>'>
+	<input type="hidden" name="itemPrice" value='<s:property value="itemPrice"/>'>
+	<input type="hidden" name="itemStock" value='<s:property value="itemStock"/>'>
+	<input type="submit" value="編集">
 	</s:form>
+
 	</td>
 </tr>
 </s:iterator>
 </table>
-</s:form>
 
 
 </body>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<!-- Strutsの詳細設定 -->
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<!-- 対象のpackageを設定 -->
+	<package name="com.internousdev.ecsite.action" extends="struts-default">
+
+		<!-- AdminAction -->
+		<action name="AdminAction" class="com.internousdev.ecsite.action.AdminAction" method="execute">
+			<result name="success">adminpage.jsp</result>
+			<result name="error">login.jsp</result>
+		</action>
+
+
+		<!-- ItemAction -->
+		<action name="ItemAction" class="com.internousdev.ecsite.action.ItemAction" method="execute">
+			<result name="success">itemedit.jsp</result>
+			<result name="error">adminpage.jsp</result>
+		</action>
+
+
+		<!--  ItemConfirmAction -->
+		<action name="ItemConfirmAction" class="com.internousdev.ecsite.action.ItemConfirmAction" method="execute">
+			<result name="success">itemEditConfirm.jsp</result>
+			<result name="error">itemedit.jsp</result>
+		</action>
+
+	</package>
+</struts>
