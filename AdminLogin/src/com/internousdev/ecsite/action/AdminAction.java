@@ -38,10 +38,7 @@ public class AdminAction extends ActionSupport implements SessionAware{
 	if(((AdminDTO)session.get("adminUser")).getAdminFlg()){
 		result = SUCCESS;
 		itemList = itemDAO.getItemInfo();
-//		session.put("admin_id",adminDTO.getAdminId());
-//		session.put("id",itemDTO.getId());
-//		session.put("Item_name",itemDTO.getItemName());
-//		session.put("Item_price", itemDTO.getItemPrice());
+
 
 		return result;
 	}
